@@ -36,7 +36,7 @@ var (
 func newRootCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:          "docker-app",
-		Short:        "Docker App Packages",
+		Short:        "Docker App Packages.",
 		Long:         `Build and deploy Docker applications.`,
 		SilenceUsage: true,
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {

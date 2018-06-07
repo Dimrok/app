@@ -74,19 +74,19 @@ func TestWriteMetadataFile(t *testing.T) {
 	err := writeMetadataFile(appName, tmpdir.Path(), "", []string{"bearclaw:bearclaw"})
 	assert.NilError(t, err)
 
-	data := `# Version of the application
+	data := `# Version of the application.
 version: 0.1.0
-# Name of the application
+# Name of the application.
 name: writemetadata_test
-# A short description of the application
+# A short description of the application.
 description: 
 # Namespace to use when pushing to a registry. This is typically your Hub username.
 #namespace: myHubUsername
-# List of application maitainers with name and email for each
+# List of application maitainers with name and email for each.
 maintainers:
   - name: bearclaw
     email: bearclaw
-# Specify false here if your application doesn't support Swarm or Kubernetes
+# Specify false here if your application doesn't support Swarm or Kubernetes.
 targets:
   swarm: true
   kubernetes: true

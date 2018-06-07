@@ -198,21 +198,21 @@ services:
     image: nginx:${NGINX_VERSION}
     command: nginx $NGINX_ARGS
 `
-	meta := `# Version of the application
+	meta := `# Version of the application.
 version: 0.1.0
-# Name of the application
+# Name of the application.
 name: app_test
-# A short description of the application
+# A short description of the application.
 description: my cool app
 # Namespace to use when pushing to a registry. This is typically your Hub username.
 #namespace: myHubUsername
-# List of application maitainers with name and email for each
+# List of application maitainers with name and email for each.
 maintainers:
   - name: bob
     email: 
   - name: joe
     email: joe@joe.com
-# Specify false here if your application doesn't support Swarm or Kubernetes
+# Specify false here if your application doesn't support Swarm or Kubernetes.
 targets:
   swarm: true
   kubernetes: true

@@ -17,7 +17,7 @@ var (
 func initCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "init <app-name> [-c <compose-file>] [-d <description>] [-m name:email ...]",
-		Short: "Start building a Docker application",
+		Short: "Start building a Docker application.",
 		Long:  `Start building a Docker application. Will automatically detect a docker-compose.yml file in the current directory.`,
 		Args:  cli.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

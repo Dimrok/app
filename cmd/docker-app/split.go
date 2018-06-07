@@ -12,7 +12,7 @@ var splitOutputDir string
 func splitCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "split [<app-name>] [-o output_dir]",
-		Short: "Split a single-file application into multiple files",
+		Short: "Split a single-file application into multiple files.",
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return packager.Split(firstOrEmpty(args), splitOutputDir)

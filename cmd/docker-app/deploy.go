@@ -33,7 +33,7 @@ func deployCmd() *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "deploy [<app-name>]",
-		Short: "Deploy or update an application",
+		Short: "Deploy or update an application.",
 		Long:  `Deploy the application on either Swarm or Kubernetes.`,
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

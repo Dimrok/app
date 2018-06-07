@@ -17,7 +17,7 @@ var (
 func helmCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "helm [<app-name>] [-s key=value...] [-f settings-file...]",
-		Short: "Generate a Helm chart",
+		Short: "Generate a Helm chart.",
 		Long:  `Generate a Helm chart for the application.`,
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

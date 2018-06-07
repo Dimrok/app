@@ -21,7 +21,7 @@ var (
 func renderCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "render <app-name> [-s key=value...] [-f settings-file...]",
-		Short: "Render the Compose file for the application",
+		Short: "Render the Compose file for the application.",
 		Long:  `Render the Compose file for the application.`,
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

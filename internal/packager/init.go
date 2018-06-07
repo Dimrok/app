@@ -225,22 +225,22 @@ func composeFileFromScratch() ([]byte, error) {
 	return yaml.Marshal(fileStruct)
 }
 
-const metaTemplate = `# Version of the application
+const metaTemplate = `# Version of the application.
 version: {{ .Version }}
-# Name of the application
+# Name of the application.
 name: {{ .Name }}
-# A short description of the application
+# A short description of the application.
 description: {{ .Description }}
 # Namespace to use when pushing to a registry. This is typically your Hub username.
 {{ if len .Namespace}}namespace: {{ .Namespace }} {{ else }}#namespace: myHubUsername{{ end }}
-# List of application maitainers with name and email for each
+# List of application maitainers with name and email for each.
 {{ if len .Maintainers }}maintainers:
 {{ range .Maintainers }}  - name: {{ .Name  }}
     email: {{ .Email }}
 {{ end }}{{ else }}#maintainers:
 #  - name: John Doe
 #    email: john@doe.com
-{{ end }}# Specify false here if your application doesn't support Swarm or Kubernetes
+{{ end }}# Specify false here if your application doesn't support Swarm or Kubernetes.
 targets:
   swarm: true
   kubernetes: true

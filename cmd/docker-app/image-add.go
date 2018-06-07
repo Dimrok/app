@@ -18,7 +18,7 @@ var (
 func imageAddCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "image-add <app-name> [services...]",
-		Short: "Add images for given services (default: all) to the app package",
+		Short: "Add images for given services (default: all) to the app package.",
 		Long: `This command renders the app's docker-compose.yml file, looks for the
 images it uses, and saves them from the local docker daemon to the images/
 subdirectory.`,

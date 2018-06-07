@@ -11,7 +11,7 @@ var packOutputFile string
 func packCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pack [<app-name>] [-o output_file]",
-		Short: "Pack the application as a single file",
+		Short: "Pack the application as a single file.",
 		Args:  cli.RequiresMaxArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return packager.Pack(firstOrEmpty(args), packOutputFile)
