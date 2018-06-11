@@ -44,9 +44,9 @@ func deployCmd() *cobra.Command {
 	cmd.Flags().StringArrayVarP(&opts.deploySettingsFiles, "settings-files", "f", []string{}, "Override settings files")
 	cmd.Flags().StringArrayVarP(&opts.deployEnv, "set", "s", []string{}, "Override settings values")
 	cmd.Flags().StringVarP(&opts.deployOrchestrator, "orchestrator", "o", "swarm", "Orchestrator to deploy on (swarm, kubernetes)")
-	cmd.Flags().StringVarP(&opts.deployKubeConfig, "kubeconfig", "k", "", "kubeconfig file to use")
-	cmd.Flags().StringVarP(&opts.deployNamespace, "namespace", "n", "default", "namespace to deploy into")
-	cmd.Flags().StringVarP(&opts.deployStackName, "name", "d", "", "stack name (default: app name)")
+	cmd.Flags().StringVarP(&opts.deployKubeConfig, "kubeconfig", "k", "", "`kubeconfig` file to use")
+	cmd.Flags().StringVarP(&opts.deployNamespace, "namespace", "n", "default", "Namespace to deploy into")
+	cmd.Flags().StringVarP(&opts.deployStackName, "name", "d", "", "Stack name (default: app name)")
 	if internal.Experimental == "on" {
 		cmd.Flags().StringArrayVarP(&opts.deployComposeFiles, "compose-files", "c", []string{}, "Override Compose files")
 	}
